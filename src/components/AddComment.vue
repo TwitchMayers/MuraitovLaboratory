@@ -45,7 +45,7 @@
                 parentId: this.parentId,
             };
 
-            axios.post('http://194.67.93.117/comments', data,{
+            axios.post('https://serene-horse-095783.netlify.app/comments', data,{
                 headers: {
                     'Username': 'Sh1mpi'
                 }
