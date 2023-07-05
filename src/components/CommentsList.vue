@@ -36,7 +36,7 @@ export default {
     }
     },
     async created() {
-        const response = await fetch('https://serene-horse-095783.netlify.app/comments');
+        const response = await fetch('http://194.67.93.117/comments');
         if (!response.ok) {
             console.error('HTTP error', response.status);
             return;
@@ -91,7 +91,7 @@ export default {
         let tree = buildTree(data.sort((a, b) => a.id - b.id));
         this.comments = flattenTree(tree);
         
-        const eventSource = new EventSourcePolyfill('https://serene-horse-095783.netlify.app/comments/stream', {
+        const eventSource = new EventSourcePolyfill('http://194.67.93.117/comments/stream', {
             headers: {
                 'Accept': 'text/event-stream',
                 'Username': 'Sh1mpi'
