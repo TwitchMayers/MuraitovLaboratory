@@ -45,7 +45,7 @@
                 parentId: this.parentId,
             };
 
-            axios.post('http://194.67.93.117/comments', data,{
+            axios.post('https://api.jsonbin.io/v3/qs/64a56dd58e4aa6225eb96c19', data,{
                 headers: {
                     'Username': 'Sh1mpi'
                 }

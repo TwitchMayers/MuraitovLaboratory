@@ -36,7 +36,7 @@ export default {
     }
     },
     async created() {
-        const response = await fetch('http://194.67.93.117/comments');
+        const response = await fetch('https://api.jsonbin.io/v3/qs/64a56dd58e4aa6225eb96c19');
         if (!response.ok) {
             console.error('HTTP error', response.status);
             return;
@@ -91,7 +91,7 @@ export default {
         let tree = buildTree(data.sort((a, b) => a.id - b.id));
         this.comments = flattenTree(tree);
         
-        const eventSource = new EventSourcePolyfill('http://194.67.93.117/comments/stream', {
+        const eventSource = new EventSourcePolyfill('https://api.jsonbin.io/v3/qs/64a56dd58e4aa6225eb96c19', {
             headers: {
                 'Accept': 'text/event-stream',
                 'Username': 'Sh1mpi'
